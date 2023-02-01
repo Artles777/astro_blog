@@ -1,4 +1,7 @@
 ---
+import "../../dist/output.css";
+import Header from "../components/common/Header.vue";
+
 const { generator, props } = Astro;
 const { title } = props;
 ---
@@ -12,10 +15,8 @@ const { title } = props;
 		<title>{ title }</title>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">About</a>
-
+		<Header client:load></Header>
+		
 		<slot></slot>
 	</body>
 </html>
